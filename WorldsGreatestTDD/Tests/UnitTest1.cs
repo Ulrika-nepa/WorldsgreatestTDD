@@ -15,28 +15,19 @@ namespace Tests
             var calculator = new Calculator();
             var result = calculator.Add(a, b);
             
-            Assert.AreEqual(c, result);
+            Assert.AreEqual(c.v, result.v);
         }
     }
 
     internal class Fraction
     {
-        private int v;
+        public int v;
 
         public Fraction(int v)
         {
             this.v = v;
         }
-        public override bool Equals(object o)
-        {
-            var other = o as Fraction;
-            return v == other.v;
-        }
-
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
-        }
+        
     }
 
     internal class Calculator
