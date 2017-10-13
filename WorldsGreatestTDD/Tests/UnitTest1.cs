@@ -6,7 +6,7 @@ namespace Tests
     public class MultiplicationTests
     {
         [TestMethod]
-        public void multiply_whole_numbers()
+        public void multiply_zeros()
         {
             var a = new Fraction(0);
             var b = new Fraction(0);
