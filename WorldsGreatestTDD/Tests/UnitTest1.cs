@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.ComponentModel.Design;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
 {
@@ -8,41 +9,37 @@ namespace Tests
         [TestMethod]
         public void multiply_zeros()
         {
-            var a = new Fraction(0);
-            var b = new Fraction(0);
-            var c = new Fraction(0);
-
-            var result = a.Multiply(b);
-            
-            Assert.AreEqual(c.Value, result.Value);
+            Assert.AreEqual(new Fraction(0).Nominator, new Fraction(0).Multiply(new Fraction(0)).Nominator);
         }
 
         [TestMethod]
         public void multiply_whole_numbers()
         {
-            var a = new Fraction(1);
-            var b = new Fraction(2);
-            var c = new Fraction(2);
+            Assert.AreEqual(new Fraction(2).Nominator, new Fraction(1).Multiply(new Fraction(2)).Nominator);
+        }
 
-            var result = a.Multiply(b);
-
-            Assert.AreEqual(c.Value, result.Value);
+        [TestMethod]
+        public void multiply_factions()
+        {
+            Assert.AreEqual(new Fraction(1,2).Nominator, new Fraction(1,1).Multiply(new Fraction(1,2)).Nominator);
         }
 
     }
 
     public class Fraction
     {
-        public int Value;
+        public int Nominator;
+        private readonly int denominator;
 
-        public Fraction(int value)
+        public Fraction(int nominator, int denominator = 1)
         {
-            Value = value;
+            Nominator = nominator;
+            this.denominator = denominator;
         }
 
         public Fraction Multiply(Fraction operand)
         {
-            return new Fraction(Value*operand.Value);
+            return new Fraction(Nominator*operand.Nominator, denominator*operand.denominator);
         }
     }
 
