@@ -3,44 +3,34 @@
 namespace Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class MultiplicationTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void multiply_whole_numbers()
         {
             var a = new Fraction(0);
             var b = new Fraction(0);
             var c = new Fraction(0);
 
-            var calculator = new Calculator();
-            var result = calculator.Add(a, b);
+            var result = a.Multiply(b);
             
-            Assert.AreEqual(c.v, result.v);
+            Assert.AreEqual(c.Value, result.Value);
         }
     }
 
-    internal class Fraction
+    public class Fraction
     {
-        public int v;
+        public int Value;
 
-        public Fraction(int v)
+        public Fraction(int value)
         {
-            this.v = v;
+            Value = value;
         }
-        
+
+        public Fraction Multiply(Fraction operand)
+        {
+            return new Fraction(Value*operand.Value);
+        }
     }
 
-    internal class Calculator
-    {
-        public Calculator()
-        {
-        }
-
-        public Fraction Add(Fraction fraction, Fraction fraction1)
-        {
-            return new Fraction(0);
-        }
-
-
-    }
 }
