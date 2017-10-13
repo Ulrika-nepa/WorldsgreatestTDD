@@ -15,5 +15,11 @@
         {
             return new Fraction(Nominator * operand.Nominator, Denominator * operand.Denominator);
         }
+
+        public override bool Equals(object o)
+        {
+            var that = o as Fraction;
+            return this.Nominator == that.Nominator;
+        }
     }
 }

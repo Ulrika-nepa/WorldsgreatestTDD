@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="MultiplicationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EqualsTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
