@@ -8,7 +8,7 @@ namespace Tests
     public class EqualsTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void nominators_are_equal()
         {
             Assert.AreEqual(new Fraction(1), new Fraction(1));
         }
