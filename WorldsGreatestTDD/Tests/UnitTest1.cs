@@ -16,6 +16,19 @@ namespace Tests
             
             Assert.AreEqual(c.Value, result.Value);
         }
+
+        [TestMethod]
+        public void multiply_whole_numbers()
+        {
+            var a = new Fraction(1);
+            var b = new Fraction(2);
+            var c = new Fraction(2);
+
+            var result = a.Multiply(b);
+
+            Assert.AreEqual(c.Value, result.Value);
+        }
+
     }
 
     public class Fraction
