@@ -34,13 +34,13 @@ namespace Tests
 
     public class Fraction
     {
-        public int Nominator;
+        public readonly int Nominator;
         public readonly int Denominator;
 
         public Fraction(int nominator, int denominator = 1)
         {
             Nominator = nominator;
-            this.Denominator = denominator;
+            Denominator = denominator;
         }
 
         public Fraction Multiply(Fraction operand)
