@@ -36,5 +36,11 @@ namespace Tests
             Assert.AreNotEqual(new Fraction(1, 3), new Fraction(1, 2));
         }
 
+        [TestMethod]
+        public void fractions_are_with_different_denominator_and_nominators_not_equal()
+        {
+            Assert.AreNotEqual(new Fraction(2, 3), new Fraction(1, 2));
+        }
+
     }
 }
