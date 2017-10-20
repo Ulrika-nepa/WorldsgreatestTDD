@@ -13,6 +13,12 @@ namespace Tests
             Assert.AreEqual(new Fraction(1), new Fraction(1));
         }
 
+        [TestMethod]
+        public void fraction_is_null()
+        {
+            Assert.AreNotEqual(new Fraction(1), null);
+        }
+
 
     }
 }
