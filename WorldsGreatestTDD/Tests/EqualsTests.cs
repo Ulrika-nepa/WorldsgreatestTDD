@@ -23,6 +23,13 @@ namespace Tests
         {
             Assert.AreNotEqual(new Fraction(1), null);
         }
+
+        [TestMethod]
+        public void fractions_are_equal()
+        {
+            Assert.AreEqual(new Fraction(1,2), new Fraction(1,2));
+        }
+
         
     }
 }
