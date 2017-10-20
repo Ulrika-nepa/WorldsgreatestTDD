@@ -19,7 +19,7 @@
         public override bool Equals(object o)
         {
             var that = o as Fraction;
-            return this.Nominator == that.Nominator;
+            return this.Nominator == that.Nominator && this.Denominator == that.Denominator;
         }
     }
 }
