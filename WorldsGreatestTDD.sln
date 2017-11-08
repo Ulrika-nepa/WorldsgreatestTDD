@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.3
+VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldsGreatestTDD", "WorldsGreatestTDD\WorldsGreatestTDD.csproj", "{8D6862EF-BBF2-4955-A526-A3E929801326}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FractionsProject", "WorldsGreatestTDD\FractionsProject.csproj", "{8D6862EF-BBF2-4955-A526-A3E929801326}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "WorldsGreatestTDD\Tests\Tests.csproj", "{C2DE37FB-BD5D-4B60-9483-0DDF28657325}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FractionsTests", "WorldsGreatestTDD\Tests\FractionsTests.csproj", "{C2DE37FB-BD5D-4B60-9483-0DDF28657325}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
